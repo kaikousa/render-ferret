@@ -5,10 +5,15 @@ require "yaml"
 require "task"
 class RenderFerret
   
+  attr_reader(:batch_interval)
+  
   def initialize
     settings = YAML.load_file("settings.yml")
     #Set up the database connections
     ActiveRecord::Base.establish_connection(settings["database"])
+    
+    @batch_interval = settings["batch_interval"]
+    @task_interval = settings["task_interval"]
     
     #Bootstrap Video Editing Engine
     $: << settings["vee_lib_path"]
@@ -35,6 +40,7 @@ class RenderFerret
       
       task.status = false
       task.save
+      sleep(@task_interval)
     }
   end
 end
@@ -43,6 +49,6 @@ ferret = RenderFerret.new
 Daemons.run_proc("render_ferret.rb") do
   loop do
     ferret.process_tasks
-    sleep(5)
+    sleep(ferret.batch_interval)
   end
 end

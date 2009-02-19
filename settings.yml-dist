@@ -7,3 +7,8 @@ database:
 
 #Path to Video Editing Engine -installation
 vee_lib_path: <insert path here>
+
+#the amount of seconds Render Ferret sleeps before processing another batch of tasks
+batch_interval: 10
+#the amount of second Render Ferret sleeps before processing next task in the batch
+task_interval: 0
