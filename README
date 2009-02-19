@@ -5,6 +5,13 @@ Render Ferret is a separate application from Video Editing Engine that handles
 the management of rendering tasks. It is a separate application for the reason 
 of keeping VEE's dependencies(huge already) as small as possible.
 
+Requirements
+-------------
+- Video Editing Engine: http://github.com/fooga/video-editing-engine/tree
+- Ruby Gems: http://www.rubygems.org/
+- daemons-library: http://daemons.rubyforge.org/
+- Active Record: http://ar.rubyonrails.com/
+
 License
 -------
 
