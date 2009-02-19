@@ -12,6 +12,21 @@ Requirements
 - daemons-library: http://daemons.rubyforge.org/
 - Active Record: http://ar.rubyonrails.com/
 
+Installation and usage
+-----------------------
+
+1. install all the requirements and their requirements (can be time consuming (especially with VEE))
+2. download and un-pack Render Ferret (or pull the source with Git)
+3. rename settings.yml-dist to settings.yml
+4. edit settings.yml
+  - insert your database configuration
+  - the installation folder of VEE (must point to "lib"-folder and must NOT include the forward slash)
+5. create an empty database and apply the database schema from render_ferret_db.sql
+6. start the daemon by typing the following to your command line
+  - ruby render_ferret.rb start
+7. stop the daemon with the following command:
+  - ruby render_ferret.rb stop
+
 License
 -------
 
