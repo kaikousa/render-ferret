@@ -1,0 +1,5 @@
+database:
+  adapter: <insert adapted(mysql, sqlite3 etc.)>
+  database: <insert database name>
+  username: <insert username>
+  password: <insert password>
