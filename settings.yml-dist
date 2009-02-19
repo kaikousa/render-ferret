@@ -1,5 +1,9 @@
+#Database settings
 database:
   adapter: <insert adapted(mysql, sqlite3 etc.)>
   database: <insert database name>
   username: <insert username>
   password: <insert password>
+
+#Path to Video Editing Engine -installation
+vee_lib_path: <insert path here>
